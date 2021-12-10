@@ -136,6 +136,10 @@ class CRM_Banking_PluginImpl_Importer_CSV extends CRM_Banking_PluginModel_Import
     $line_nr = 0;
     $bytes_read = 0;
     $header = array();
+    
+    if (fgets($file, 4) !== "\xef\xbb\xbf") { // Skip BOM if present
+    rewind($file); // Or rewind pointer to start of file
+    }
 
     $batch = $this->openTransactionBatch();
     while (($line = fgetcsv($file, 0, $config->delimiter)) !== FALSE) {
