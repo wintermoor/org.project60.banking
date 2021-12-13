@@ -410,9 +410,22 @@ class CRM_Banking_PluginImpl_Matcher_ExistingContribution extends CRM_Banking_Pl
       return false;
     }
 
-    // depending on mode...
+    // depending on mode... ECOPLAN Issue 298
     if ($this->_plugin_config->mode != "cancellation") {
-      $query['contribution_status_id'] = banking_helper_optionvalue_by_groupname_and_name('contribution_status', 'Completed');
+      $amount_to_pay = (float) $contribution['total_amount'];
+      if ($query['contribution_status_id'] == 'Partially paid') {
+        $payments = civicrm_api('FinancialItem', 'get', array('version' => 3, 'entity_id' => $contribution_id));
+        if ($payments['count'] > 0) {
+          foreach ($payments['values'] as $payment) {
+            $amount_to_pay -= (float) $payment['amount'];
+          }
+        }
+      }
+      if (abs($btx->amount) < $amount_to_pay) {
+        $query['contribution_status_id'] = banking_helper_optionvalue_by_groupname_and_name('contribution_status', 'Partially paid');
+      } else {
+        $query['contribution_status_id'] = banking_helper_optionvalue_by_groupname_and_name('contribution_status', 'Completed');
+      }
       $query['receive_date'] = date('YmdHis', strtotime($btx->booking_date));
     } else {
       $query['contribution_status_id'] = banking_helper_optionvalue_by_groupname_and_name('contribution_status', 'Cancelled');
