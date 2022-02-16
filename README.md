@@ -24,4 +24,7 @@ Fork
 ECOPLAN GmbH added some PR und bugfixes to create a working snapshot of the master branch. Looking forward for a new release... 
 
 Changes: 
-https://github.com/Project60/org.project60.banking/pull/349/ (and 348) 
+Issue #348 and #349 Search / filter list of statements not working
+Translation de_DE for configuration_database/Matcher/DefaultOptions/Default Options.civbanking 
+Issue #298 configuration_database/Matcher/DefaultOptions/Default Options.civbanking 
+Issue #300 extension/CRM/Banking/PluginImpl/Importer/CSV.php 
