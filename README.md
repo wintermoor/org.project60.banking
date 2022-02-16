@@ -16,3 +16,12 @@ Installation
 ============
 
 Simply download the ``org.project60.banking-x.x.zip`` file from the [**latest release**](https://github.com/Project60/org.project60.banking/releases/latest), unzip in your extension folder, and then press install in CiviCRM's extension screen.
+
+
+Fork
+====
+
+ECOPLAN GmbH added some PR und bugfixes to create a working snapshot of the master branch. Looking forward for a new release... 
+
+Changes: 
+https://github.com/Project60/org.project60.banking/pull/349/ (and 348) 
