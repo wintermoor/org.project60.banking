@@ -28,3 +28,4 @@ Issue #348 and #349 Search / filter list of statements not working
 Translation de_DE for configuration_database/Matcher/DefaultOptions/Default Options.civbanking 
 Issue #298 configuration_database/Matcher/DefaultOptions/Default Options.civbanking 
 Issue #300 extension/CRM/Banking/PluginImpl/Importer/CSV.php 
+Issue #293 PHP 7.2 compatibility https://github.com/Project60/org.project60.banking/issues/293 -> TODO
