@@ -266,7 +266,7 @@
       alert("No ID set!");
       return;
     }
-    // ok, we have a contact -> create a new (test) contribution
+    // ok, we have a contact -> create a new (test) contribution - ECOPLAN Issue 311
     CRM.api3("Contribution", "create", { "sequential": 1,
                                         "contact_id": contact_id, 
                                         "is_test": 1, 
@@ -278,7 +278,7 @@
                                         "source": "{/literal}{$manual_default_source}{literal}",
                                         "financial_type_id": "{/literal}{$manual_default_financial_type_id}{literal}",
                                         {/literal}{foreach from=$create_propagation item=value key=key}
-                                        "{$key}": "{$value}",
+                                        {if $key !=note}"{$key}": "{$value}",{/if}
                                         {/foreach}{literal}
                                       },
       { success: function(data) {
