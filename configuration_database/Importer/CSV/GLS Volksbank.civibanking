@@ -15,7 +15,7 @@
             "currency": "EUR"
         },
 		
-		"fields": "Bezeichnung Auftragskonto,IBAN Auftragskonto,BIC Auftragskonto,Bankname Auftragskonto,Buchungstag,Valutadatum,Name Zahlungsbeteiligter,IBAN Zahlungsbeteiligter,BIC (SWIFT-Code) Zahlungsbeteiligter,Buchungstext,Verwendungszweck,Betrag,Waehrung,Saldo nach Buchung,Bemerkung,Kategorie,Steuerrelevant,Glaeubiger ID,Mandatsreferenz",
+	"fields": "Bezeichnung Auftragskonto,IBAN Auftragskonto,BIC Auftragskonto,Bankname Auftragskonto,Buchungstag,Valutadatum,Name Zahlungsbeteiligter,IBAN Zahlungsbeteiligter,BIC (SWIFT-Code) Zahlungsbeteiligter,Buchungstext,Verwendungszweck,Betrag,Waehrung,Saldo nach Buchung,Bemerkung,Kategorie,Steuerrelevant,Glaeubiger ID,Mandatsreferenz",
  
         "rules": [
             {
@@ -59,7 +59,7 @@
                 "type": "append:"
             },
 
-			{
+		{
                 "from": "Mandatsreferenz",
                 "to": "reference",
                 "type": "set"
