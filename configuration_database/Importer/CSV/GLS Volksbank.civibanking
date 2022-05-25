@@ -1,8 +1,8 @@
 {
     "plugin_type_name": "import",
     "plugin_class_name": "importer_csv",
-    "name": "GLS CSV neu",
-    "description": "Importiert CSV Kontoausz\u00fcge von deutschen Volksbanken und der GLS, angepasst im Mai 2022",
+    "name": "GLS Volksbank",
+    "description": "Importiert CSV Kontoausz\u00fcge von deutschen Volksbanken und GLS, angepasst im Mai 2022",
     "weight": "1000",
     "config": {
         "delimiter": ";",
