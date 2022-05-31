@@ -6,7 +6,7 @@
     "weight": "1000",
     "config": {
         "delimiter": ";",
-        "encoding": "CP1252",
+        "encoding": "UTF8",
         "header": 1,
         "title": "GLS {starting_date} - {ending_date} [{md5}]",
         "defaults": {
